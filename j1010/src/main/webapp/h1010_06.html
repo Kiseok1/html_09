@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>animation</title>
+		<style>
+			/* css 주석 */
+			*{margin:0; padding: 0;}
+			.box{width: 200px; height: 200px; margin:30px auto;
+				 animation:back 1.5s infinite alternate, rotate 1.5s infinite;
+				 }
+			@keyframes rotate{
+				0%{transform: perspective(170px) rotateX(0deg) rotateY(0deg);}
+				50%{transform: perspective(170px) rotateX(-180deg) rotateY(0deg);}
+				100%{transform: perspective(170px) rotateX(-180deg) rotateY(-180deg);}
+				
+			}
+			@keyframes back{
+				from{background: red;}
+				50%{background: green;}
+				to{background: blue;}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box"></div>
+	
+	</body>
+</html>
